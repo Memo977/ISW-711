@@ -1,3 +1,4 @@
+require('dotenv').config();
 const express = require('express');
 const mongoose = require('mongoose');
 const bookRoutes = require('./routes/bookRoutes'); // Importar las rutas
@@ -10,7 +11,7 @@ app.use(express.json());
 app.use('/books', bookRoutes);
 
 // Conectar a MongoDB
-mongoose.connect('mongodb+srv://memoochoa097:p93F3BX6FCBecTXq@workshop1.253vy.mongodb.net/Books?retryWrites=true&w=majority&appName=Workshop1', {
+mongoose.connect(process.env.MONGODB_URI, {
     useNewUrlParser: true,
     useUnifiedTopology: true
 })
