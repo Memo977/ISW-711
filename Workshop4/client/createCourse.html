@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registrar Curso</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+  <div class="container mt-5">
+    <h2 class="mb-4">Registrar Nuevo Curso</h2>
+    <form id="courseForm">
+      <div class="mb-3">
+        <label for="name" class="form-label">Nombre:</label>
+        <input type="text" class="form-control" id="name" placeholder="Ingrese el nombre" required>
+      </div>
+      <div class="mb-3">
+        <label for="code" class="form-label">Código:</label>
+        <input type="text" class="form-control" id="code" placeholder="Ingrese el código" required>
+      </div>
+      <div class="mb-3">
+        <label for="description" class="form-label">Descripción:</label>
+        <textarea class="form-control" id="description" placeholder="Ingrese la descripción" required></textarea>
+      </div>
+      <div class="mb-3">
+        <label for="credits" class="form-label">Créditos:</label>
+        <input type="number" class="form-control" id="credits" placeholder="Ingrese los créditos" required>
+      </div>
+      <div class="mb-3">
+        <label for="teacher" class="form-label">Profesor:</label>
+        <select class="form-control" id="teacher" required>
+          <option value="">Seleccione un profesor</option>
+        </select>
+      </div>
+      <button type="button" class="btn btn-primary" onclick="createCourse()">Guardar Curso</button>
+      <a href="showCourses.html" class="btn btn-secondary ms-2">Ver Cursos</a>
+    </form>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../client/js/functions.js"></script>
+  <script>
+    window.onload = loadTeachersForCourse;
+  </script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lista de Profesores</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../styles/styles.css" rel="stylesheet">
+</head>
+<body>
+  <div class="container mt-5">
+    <div class="mb-4">
+      <a href="../client/index.html" class="btn btn-secondary">
+        <i class="bi bi-arrow-left"></i> Atrás
+      </a>
+    </div>
+
+    <h2 class="mb-4 text-center">Lista de Profesores</h2>
+    <div class="table-responsive custom-table shadow rounded">
+      <table class="table table-striped table-hover table-bordered">
+        <thead>
+          <tr>
+            <th>Nombre</th>
+            <th>Apellido</th>
+            <th>Cédula</th>
+            <th>Edad</th>
+            <th>Acciones</th>
+          </tr>
+        </thead>
+        <tbody id="result">
+        </tbody>
+      </table>
+    </div>
+    <div class="mt-4 text-center">
+      <a href="createTeacher.html" class="btn btn-success btn-lg">Registrar Nuevo Profesor</a>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../client/js/functions.js"></script>
+  <script>
+    window.onload = getTeachers;
+  </script>
+</body>
+</html>

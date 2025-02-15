@@ -1,0 +1,12 @@
+.custom-table {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  .custom-table thead {
+    background-color: #0d6efd; /* Color azul de Bootstrap */
+    color: white;
+  }
+  .custom-table tbody tr:hover {
+    background-color: #f1f7ff; /* Fondo claro al pasar el cursor */
+  }
