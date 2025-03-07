@@ -11,7 +11,7 @@ const app = express();
 app.use(express.json());
 
 // Servir archivos estáticos desde la carpeta 'public'
-app.use(express.static(path.join(__dirname, 'client')));
+app.use(express.static(path.join(__dirname, '..', 'client')));
 
 // Usar las rutas de usuarios
 app.use('/api/users', userRoutes);
@@ -26,12 +26,12 @@ mongoose.connect(process.env.MONGODB_URI)
 
 // Ruta principal
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'client', 'login.html'));
+    res.sendFile(path.join(__dirname, '..','client', 'login.html'));
 });
 
 // Ruta para la página de libros
 app.get('/books', (req, res) => {
-    res.sendFile(path.join(__dirname, 'client', 'books.html'));
+    res.sendFile(path.join(__dirname, '..','client', 'books.html'));
 });
 
 // Iniciar el servidor
